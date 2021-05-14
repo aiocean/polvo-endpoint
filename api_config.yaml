@@ -1,0 +1,17 @@
+type: google.api.Service
+config_version: 3
+name: grpc.endpoints.aio-shopify-services.cloud.goog
+title: gRPC API Endpoint
+
+apis:
+  - name: aiocean.polvo.v1.PolvoService
+
+usage:
+  rules:
+    - selector: aiocean.polvo.v1.PolvoService.*
+      allow_unregistered_calls: true
+
+backend:
+  rules:
+    - selector: "aiocean.polvo.v1.PolvoService.*"
+      address: grpcs://polvo.aiocean.services
