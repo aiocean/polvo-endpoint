@@ -13,7 +13,7 @@ endpoint: api_descriptor.pb
 	gcloud endpoints services deploy api_descriptor.pb api_config.yaml
 
 build:
-	./gcloud_build_image -s grpc.endpoints.aio-shopify-services.cloud.goog -p aio-shopify-services -c 2021-05-14r1
+	./gcloud_build_image -s polvo-endpoint.endpoints.aio-shopify-services.cloud.goog -p aio-shopify-services -c $CONFIG_ID
 
 apply:
 	aiocli apply

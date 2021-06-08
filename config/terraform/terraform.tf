@@ -44,7 +44,7 @@ resource "google_cloud_run_service" "default" {
 
         env {
           name = "ESPv2_ARGS"
-          value = "^++^--cors_preset=basic++--cors_allow_origin=*++--cors_allow_headers=DNT,User-Agent,X-User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization,X-Grpc-Web"
+          value = "^++^--cors_preset=basic++--cors_allow_origin=*++--cors_allow_headers=DNT,User-Agent,X-User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization,X-Grpc-Web++--cors_expose_headers=*"
         }
 
         resources {

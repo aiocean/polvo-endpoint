@@ -1,8 +1,11 @@
 type: google.api.Service
 config_version: 3
-name: grpc.endpoints.aio-shopify-services.cloud.goog
-title: gRPC API Endpoint
+name: polvo-endpoint.endpoints.aio-shopify-services.cloud.goog
+title: Polvo API Endpoint
 
+endpoints:
+  - name: polvo-endpoint.aiocean.services
+    allow_cors: true
 apis:
   - name: aiocean.polvo.v1.PolvoService
 
