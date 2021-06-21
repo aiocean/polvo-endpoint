@@ -40,6 +40,12 @@ variable "endpoint_config_id" {
   description = "API Config ID. Example: 2021-05-14r3"
 }
 
+variable "managed_dns_zone" {
+  type        = string
+  default     = "aiocean-services"
+  description = "Managed DNS Zone that you want to create domain"
+}
+
 locals {
   endpoint_service_id = "${var.service_id}.endpoints.${var.project_id}.cloud.goog"
   service_domain    = "${var.service_id}.${var.service_base_domain}"

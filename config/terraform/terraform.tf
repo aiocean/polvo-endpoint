@@ -110,7 +110,7 @@ resource "google_service_account" "client_service_account" {
 
 resource "google_dns_record_set" "resource_recordset" {
   provider     = google-beta
-  managed_zone = "aiocean-services"
+  managed_zone = var.managed_dns_zone
   name         = "${local.service_domain}."
   type         = "CNAME"
   rrdatas      = ["ghs.googlehosted.com."]
