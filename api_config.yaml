@@ -6,8 +6,8 @@ title: Polvo API Endpoint
 authentication:
   providers:
     - id: google_service_account
-      issuer: SERVICE-ACCOUNT-ID
-      jwks_uri: https://www.googleapis.com/robot/v1/metadata/x509/SERVICE-ACCOUNT-ID
+      issuer: polvo-endpoint-client
+      jwks_uri: https://www.googleapis.com/robot/v1/metadata/x509/polvo-endpoint-client
   rules:
     - selector: "*"
       requirements:

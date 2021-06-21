@@ -1,4 +1,3 @@
-.PHONY: api_descriptor.pb
 api_descriptor.pb:
 	protoc \
 		--include_imports \
