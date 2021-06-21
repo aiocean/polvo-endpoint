@@ -22,7 +22,7 @@ resource "google_cloud_run_service" "default" {
       }
     }
     spec {
-      container_concurrency = 80
+      container_concurrency = 10
       containers {
         image = local.docker_image_url
         ports {
@@ -101,6 +101,11 @@ resource "google_cloud_run_domain_mapping" "default" {
   spec {
     route_name = google_cloud_run_service.default.name
   }
+}
+
+resource "google_service_account" "client_service_account" {
+  account_id   = "${local.service_full_name}-client"
+  display_name = "Client Service Account"
 }
 
 resource "google_dns_record_set" "resource_recordset" {

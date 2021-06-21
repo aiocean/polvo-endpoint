@@ -3,6 +3,15 @@ config_version: 3
 name: polvo-endpoint.endpoints.aio-shopify-services.cloud.goog
 title: Polvo API Endpoint
 
+authentication:
+  providers:
+    - id: google_service_account
+      issuer: SERVICE-ACCOUNT-ID
+      jwks_uri: https://www.googleapis.com/robot/v1/metadata/x509/SERVICE-ACCOUNT-ID
+  rules:
+    - selector: "*"
+      requirements:
+        - provider_id: google_service_account
 endpoints:
   - name: polvo-endpoint.aiocean.services
     allow_cors: true

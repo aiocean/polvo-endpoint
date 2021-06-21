@@ -36,7 +36,7 @@ variable "esp_version" {
 
 variable "endpoint_config_id" {
   type        = string
-  default     = "2021-06-08r2"
+  default     = "2021-06-09r2"
   description = "API Config ID. Example: 2021-05-14r3"
 }
 
